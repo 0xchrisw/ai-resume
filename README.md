@@ -7,10 +7,12 @@ This is the repository that supports the [Heroku app](https://ai-resume-190f5163
 ```bash
 python -m venv venv
 . venv/bin/activate
-pip install -r requirements.txt
+pip install --upgrade pip
+pip install --editable .
 ```
 
 ## Running Locally
+You can use the entrypoint command `ai-resume` from the command line, or run the following command:
 ```bash
-uvicorn main:app --reload
+uvicorn ai_resume.app:main --reload
 ```
